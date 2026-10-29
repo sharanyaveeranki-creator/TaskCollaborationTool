@@ -1,0 +1,26 @@
+```html
+{% extends "base.html" %}
+
+{% block title %}Login | TaskFlow{% endblock %}
+
+{% block content %}
+<div class="auth-card">
+    <h1>Welcome Back!</h1>
+    <p>Log in to manage your tasks.</p>
+
+    <form method="POST">
+        <label>Username</label>
+        <input type="text" name="username" required>
+
+        <label>Password</label>
+        <input type="password" name="password" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p class="switch-link">
+        New user? <a href="{{ url_for('register') }}">Create an account</a>
+    </p>
+</div>
+{% endblock %}
+```
